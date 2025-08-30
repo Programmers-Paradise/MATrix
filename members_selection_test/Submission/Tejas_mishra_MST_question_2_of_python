@@ -1,0 +1,24 @@
+# Name: Tejas Mishra
+# Roll Number: 300012723066 
+# Question: Palindrome Portal
+# Time: 30 minutes
+
+
+
+
+def is_palindrome(text):
+    text = text.lower()  # make lowercase
+    cleaned = ""         # remove spaces and punctuation
+    for char in text:
+        if char.isalpha():
+            cleaned += char
+    return cleaned == cleaned[::-1]  # check if reversed is same
+
+# input
+word = input("Enter a word or phrase: ")
+
+# print result
+if is_palindrome(word):
+    print(f"'{word}' is a magical palindrome! The portal opens before you!")
+else:
+    print(f"'{word}' is not a palindrome. The portal remains sealed.")
