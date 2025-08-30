@@ -1,0 +1,27 @@
+% Name:Tejas Mishra
+% Roll Number: 300012723066
+% Question: Space Mission Control
+% Time: 30 minutes
+%  Create arrays
+soil_density = [2.3, 1.8, 3.1, 2.7, 1.9, 3.4, 2.1, 2.9];
+rover_locations = [10, 25, 40, 55, 70, 85, 100, 115];
+
+% Basic Analysis
+total_points = length(soil_density);
+max_density = max(soil_density);
+min_density = min(soil_density);
+average_density = mean(soil_density);
+
+%  Data Processing
+heavy_soil = soil_density > 2.5;
+heavy_count = length(find(heavy_soil));
+max_index = find(soil_density == max_density);
+
+% Display results
+disp('=== MARS MISSION CONTROL - ROVER DATA ANALYSIS ===')
+disp(['Total Measurement Points: ', num2str(total_points)])
+disp(['Maximum Soil Density: ', num2str(max_density), ' g/cm³'])
+disp(['Minimum Soil Density: ', num2str(min_density), ' g/cm³'])
+disp(['Average Density: ', num2str(average_density), ' g/cm³'])
+disp(['Heavy Soil Locations: ', num2str(heavy_count), ' sites found'])
+disp(['Index of Maximum Density Reading: ', num2str(max_index)])
